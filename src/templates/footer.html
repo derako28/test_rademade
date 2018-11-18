@@ -1,0 +1,250 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="menu menu__footer">
+                <a href="#" class="menu__link">
+                    content
+                </a>
+                <a href="#" class="menu__link">
+                    design
+                </a>
+                <a href="#" class="menu__link">
+                    frontend
+                </a>
+                <a href="#" class="menu__link">
+                    backend
+                </a>
+                <a href="#" class="menu__link">
+                    testing
+                </a>
+                <a href="#" class="menu__link">
+                    playground
+                </a>
+
+            </div>
+        </div>
+        <div class="footer__middle">
+            <div class="contact">
+                <span>Contact Us:</span>
+                <a href="#" class="link_email">dev@semalt.com</a>
+                <a href="#" class="link_skype">dev.semalt </a>
+            </div>
+
+            <a href="#" class="bttn bttn__phone">
+                <span>Toll Free:</span> 1-800-462-8694
+            </a>
+
+            <div class="soc">
+                <span>
+                    Follow Us:
+                </span>
+
+                <a href="#" class="fab fa-behance"></a>
+                <a href="#" class="zmdi zmdi-instagram"></a>
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-linkedin-in"></a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="semalt_production">
+                <span>Powered by</span>
+
+                <a href="#">
+                    <div class="logo_semalt">
+                        <div class="m"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="popup popup_form mfp-hide" id="popupForm">
+
+
+    <form class="swd-form" data-type="appointment" data-title="form">
+        <a href="javascript:void(0)" class="mfp-close"></a>
+
+        <div class="popup__title">
+            Drop Us a Line
+        </div>
+
+        <div class="input-group input-wrap">
+            <label class="label__input">Name</label>
+            <input name='name' type="text" data-error="Enter name" data-err-empty="Enter name"
+                   data-req="true"
+                   class="ist_input" data-step="1">
+
+            <div class="label__error">
+                <div class="icon__error"></div>
+                <div class="text__error">
+                    This field was entered incorrectly, try again!
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group input-wrap">
+            <label class="label__input">Last Name</label>
+            <input name='name' type="text" data-error="Enter name" data-err-empty="Enter name"
+                   data-req="true"
+                   class="ist_input" data-step="1">
+
+            <div class="label__error">
+                <div class="icon__error"></div>
+                <div class="text__error">
+                    This field was entered incorrectly, try again!
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group input-wrap">
+            <label class="label__input">Email</label>
+            <input name='email' type="text" data-err="Enter valid email"
+                   data-req="true"
+                   class="ist_input" data-step="1">
+
+            <div class="label__error">
+                <div class="icon__error"></div>
+                <div class="text__error">
+                    This field was entered incorrectly, try again!
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group input-wrap">
+            <label class="label__input">Phone</label>
+            <input name='phone' type="text" data-err="Enter valid name"
+                   data-req="true"
+                   class="ist_input" data-step="1">
+
+            <div class="label__error">
+                <div class="icon__error"></div>
+                <div class="text__error">
+                    This field was entered incorrectly, try again!
+                </div>
+            </div>
+        </div>
+
+
+        <div class="textarea-group input-wrap">
+            <label class="label__input">Your message</label>
+
+            <textarea name='your-message' class="textarea" data-err-empty="Enter message"></textarea>
+        </div>
+
+
+        <div class="form__bottom">
+            <div class="g-recaptcha-wr">
+                <div class="g-recaptcha"></div>
+                <div class="label__error static">
+                    <div class="icon__error"></div>
+                    <div class="text__error">
+                        This field was entered incorrectly, try again!
+                    </div>
+                </div>
+            </div>
+
+            <div class="input__file input-wrap js-add-files">
+                <a href="javascript:void(0)" class="bttn bttn__attach bttn_blue">Atach files</a>
+                <input type="file" multiple="multiple" name="files">
+
+            </div>
+
+            <a href="javascript:void(0)" class="bttn bttn_submit" data-error="Error">Submit</a>
+        </div>
+
+        <div class="error__form">
+            Error!
+        </div>
+    </form>
+</div>
+
+<div class="popup popup__success mfp-hide" id="requestSuccess">
+
+    <div class="popup__in">
+        <div class="popup__title">
+            Thank you!
+        </div>
+        <div class="caption">
+            Your message has been sent successfully.
+        </div>
+        <img src="assets/img/icon_success.png" alt="">
+
+        <a href="javascript:void(0)" class="bttn bttn__back mfp-close">
+            Back to Website
+        </a>
+    </div>
+
+</div>
+
+<div class="popup popup__error mfp-hide" id="requestError">
+
+    <div class="popup__in">
+        <div class="popup__title">
+            SORRY, YOUR MESSAGE <br>
+            COULD NOT BE SEND
+        </div>
+        <div class="caption">
+            Please, try again later.
+        </div>
+        <img src="assets/img/icon_error.png" alt="">
+
+        <a href="javascript:void(0)" class="bttn bttn__back mfp-close">
+            Back to Website
+        </a>
+    </div>
+</div>
+
+<div id="cookie_policy" class="cookie_policy">
+    <div class="cookie_policy__img">
+        <img src="assets/img/img_cookie.png" alt="">
+    </div>
+    <div class="cookie_policy__title">
+        You’ve got cookie!
+    </div>
+    <div class="cookie_policy__text">
+        SupportYourApp uses cookies to personalize content and to make our site easier for you to use. We do also share
+        that information with third parties for advertising
+        <nobr>& analytics.</nobr>
+
+    </div>
+    <div class="cookie_policy__bottom">
+        <a href="#" class="bttn">
+            GOT IT
+        </a>
+
+        <span>OR</span>
+
+        <a href="#" class="link">
+            Learn More
+        </a>
+    </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP5wo7yrgRaDgty1Ph-ixOPblSXPbi4YM&language=en"></script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
+
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+<script src="libs/timepicker/jquery.timepicker.min.js"></script>
+<script src="libs/masonry/masonry.js"></script>
+<script src="libs/nicescroll/jquery.nicescroll.min.js"></script>
+<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="libs/slick/slick.min.js"></script>
+
+<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="libs/3dSlider/3dSlider.js"></script>
+
+<script src="assets/js/common.js"></script>
+<!--<script src="assets/js/request.js"></script>-->
+<script src="assets/js/map.js"></script>
+
+
+</body>
+</html>

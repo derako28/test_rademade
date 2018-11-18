@@ -1,0 +1,275 @@
+.crm
+  display: flex
+  min-height: 100vh
+  background: #f2f2f2
+  width: 100%
+  max-width: 1415px
+  margin: 0 auto
+
+  &__main
+    flex-grow: 1
+
+  &__title
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    color: #6B7DEA
+    text-transform: uppercase
+    font-size: .8rem
+    font-weight: 700
+
+.logo
+  margin-bottom: 40px
+  display: block
+
+.sidebar
+  flex-basis: 200px
+  background: #3C52C9
+
+.menu
+  color: #fff
+  padding: 15px 10px 20px 25px
+  width: 100%
+
+  &__item
+    margin-bottom: 15px
+
+    &_current
+      opacity: 1
+
+      .menu__link
+        background: #2438AB
+        opacity: 1
+
+  &__link
+    color: inherit
+    display: block
+    padding: 5px 25px
+    font-size: .75rem
+    border-radius: 5px
+    font-weight: 700
+    opacity: .7
+
+
+    &:hover
+      background: #2438AB
+      opacity: 1
+
+.submenu
+  &__link
+    color: #fff
+    font-size: .65rem
+    margin-left: 30px
+    transition: opacity .3s
+
+    &:hover
+      opacity: .7
+
+
+.panel_top
+  width: 100%
+  height: 60px
+  display: flex
+  align-items: center
+  padding: 0 15px
+  background: #fff
+  box-shadow: 0 2px rgba(0, 0, 0, 0.0466)
+  position: relative
+  margin-bottom: 30px
+
+.btn
+  background: #3D61FF
+  color: #fff
+  text-transform: uppercase
+  font-size: .9rem
+  height: 35px
+  line-height: 37px
+  border-radius: 5px
+  padding: 0 35px
+  cursor: pointer
+  box-shadow: 0 3px 7px rgba(61, 97, 255, 0.2702)
+  border: 1px #3C52C9 solid
+  transition: background .3s, color .3s
+
+  &:hover
+    background: none
+    color: #3D61FF
+
+  &_back
+    border: 1px #3C52C9 solid
+    border-radius: 3px
+    height: 25px
+    line-height: 25px
+    font-size: .6rem
+    color: #3C52C9
+    font-weight: 700
+    padding: 0 15px
+    background: none
+
+    &:before
+      content: '\f053'
+      font-family: $font-awesome
+      font-weight: 600
+      margin-right: 5px
+
+    &:hover
+      background: #3C52C9
+      color: #fff
+
+.panel__search
+  display: flex
+  align-items: center
+  padding: 0 45px 0 5px
+  margin-bottom: 25px
+
+  .btn
+    margin-left: auto
+
+.search
+  &__input
+    background: #fff
+    height: 45px
+    border-radius: 3px
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.038)
+    padding-left: 20px
+    color: rgba(0, 0, 0, 0.5)
+    font-weight: 700
+    font-size: .7rem
+    min-width: 280px
+    position: relative
+    margin-right: 20px
+
+    &::placeholder
+      color: rgba(0, 0, 0, 0.2)
+      font-weight: 700
+
+  &__total
+    font-weight: 700
+
+  &__value
+    color: #3C52C9
+    margin-right: 10px
+
+  &__text
+    color: rgba(0, 0, 0, 0.35)
+
+.input__group
+  position: relative
+  display: inline-block
+
+.btn_search
+  position: absolute
+  display: inline-block
+  right: 20px
+  top: 50%
+  transform: translateY(-50%)
+  height: 100%
+
+  &:after
+    content: url(../img/icon_search.svg)
+    display: inline-block
+    height: 22px
+
+.crm__table
+  width: 100%
+  background: #fff
+
+  border-collapse: collapse
+  box-shadow: 0 3px rgba(0, 0, 0, 0.038)
+  font-size: .7rem
+
+  thead
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.0873)
+    padding: 0 50px
+
+  tbody
+    padding: 0 50px
+
+  tr
+    height: 60px
+    padding: 0 50px
+    border-radius: 5px
+
+    &:nth-child(even)
+      background: #F2F2F2
+
+
+  th, td
+    text-align: left
+    border-spacing: 0
+
+    &:first-child
+      padding-left: 50px
+
+    &:last-child
+      padding-right: 50px
+      
+    &:last-child, &:nth-last-child(2), &:nth-last-child(3)
+      text-align: right
+
+  .connected
+    color: #86EE82
+
+    .status_indicator
+      background: #86EE82
+
+  .disconnected
+    color: #FF5867
+
+    .status_indicator
+      background: #FF5867
+
+.status_indicator
+  width: 10px
+  height: 10px
+  background: #000
+  display: inline-block
+  border-radius: 50px
+  margin-left: 10px
+
+.btn
+
+  &_edit
+    width: 25px
+    height: 25px
+    background: #C2CEFF
+    border-radius: 50%
+    position: relative
+    transition: background .3s
+  
+    &:after
+      content: url('../img/icon_edit.svg')
+      position: absolute
+      display: inline-block
+      height: 15px
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      
+    &:hover
+      background: #a3b5ff
+
+  &_more
+    width: 25px
+    height: 25px
+    background: #fff
+    border-radius: 50%
+    position: relative
+    overflow: hidden
+    margin-right: 20px
+    transition: background .3s
+
+    &:after
+      content: url('../img/icon_more.svg')
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      height: 18px
+      color: #DADADA
+      
+    &:hover
+      background: #eee
+
+

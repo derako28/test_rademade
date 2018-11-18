@@ -1,0 +1,546 @@
+@import "fonts"
+@import "vars"
+
+html
+  overflow-x: hidden
+  display: flex
+  min-height: 100vh
+  font-size: 20px
+
+body
+  min-width: 320px
+  width: 100%
+  position: relative
+  line-height: 1.5
+  font-weight: 400
+  display: flex
+  flex-direction: column
+  font-size: 20px
+  opacity: 1
+  margin: 0
+  font-family: $default-font
+
+  min-height: 100%
+
+ol, ul, p, h1, h2, h3, h4, h5, h6
+  list-style: none
+  padding: 0
+  margin: 0
+
+
+blockquote, q
+  quotes: none
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #989a9c
+  opacity: 1
+
+*:-moz-placeholder
+  color: #989a9c
+  opacity: 1
+
+*::-moz-placeholder
+  color: #989a9c
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #989a9c
+  opacity: 1
+
+a
+  text-decoration: none
+  outline: none
+
+button
+  background: none
+  border: none
+  box-shadow: none
+  outline: none
+  cursor: pointer
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #989a9c
+
+body input:required:valid,
+body textarea:required:valid
+  color: #989a9c
+
+img
+  max-width: 100%
+
+h2
+  font-size: 24px
+  font-weight: 900
+  text-align: center
+
+.container
+  max-width: 1140px
+  margin: 0 auto
+  padding: 0 15px
+
+.container-fluid
+  width: 100%
+  max-width: 1280px
+  margin: 0 auto
+
+input
+  border: none
+  box-shadow: none
+  outline: none
+  background: none
+
+
+.bttn
+  background: #000
+  padding: 0 20px
+  display: flex
+  align-items: center
+  height: 35px
+  color: #fff
+  border-radius: 20px
+  text-transform: uppercase
+  font-size: .8rem
+  white-space: nowrap
+  transition: background .3s
+
+  &__wr
+    display: flex
+    justify-content: center
+
+
+  &_blue
+    background: #aedbff
+
+    &:hover
+      background: #000
+
+  &_lightblue
+    background: #59b5ff
+
+    &:hover
+      background: #1792f4
+
+  &_darkblue
+    background: #389aeb
+
+    &:hover
+      background: #000
+
+  &_yellow
+    background: #fece00
+
+    &:hover
+      background: #ffdd4a
+
+  &_big
+    height: 55px
+    line-height: 55px
+    padding: 0 40px
+    border-radius: 30px
+
+  &_whatch
+    &:after
+      content: '\f0a4'
+      font-family: $font-awesome
+      font-weight: 600
+      margin-left: 7px
+
+  &__play
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    background: #d86371
+    color: #fff
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    box-shadow: 0 0 21.33px 5.67px rgba(58, 58, 58, 0.14)
+
+    &:before
+      content: '\f2f6'
+      font: $font-material
+      font-size: 2rem
+      display: block
+      transform: scale(1.4,1)
+
+    &:hover
+      background: #e84e60
+
+
+    &_green
+      background: #00d4b3
+
+      &:hover
+        background: #2defd1
+
+    &_yellow
+      background: #fece00
+
+      &:hover
+        background: #ffdd4a
+
+  &__read
+    color: #fff
+    font-size: .8rem
+    display: flex
+    align-items: center
+    position: relative
+
+    &:hover
+      &:after
+        left: 5px
+
+    &:after
+      content: '\f30b'
+      font-family: $font-awesome
+      font-weight: 600
+      margin-left: 5px
+      position: relative
+      left: 0
+      transition: left .3s
+
+
+  &__attach
+    position: relative
+    padding-right: 50px
+    &:after
+      content: '\f0c6'
+      font-family: $font-awesome
+      font-weight: 600
+      font-size: .75rem
+      width: 25px
+      height: 25px
+      border-radius: 50%
+      background: #389aeb
+      display: flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      top: 0
+      right: 5px
+      bottom: 0
+      margin: auto 0
+
+  &__search
+    background: #2ad6c5
+    border-radius: 30px
+    display: flex
+    align-items: center
+    color: #ffffff
+    font-size: .7rem
+    padding: 0 15px 0 30px
+    text-transform: uppercase
+
+    &:after
+      content: '\f002'
+      font-family: $font-awesome
+      font-weight: 600
+      margin-left: 20px
+
+    &:hover
+      background: #2defd1
+
+  &__back
+    background: none
+    border: 1px #88daff solid
+    color: #171717
+
+  &_submit
+    min-width: 185px
+    text-align: center
+    background: #389aeb
+    justify-content: center
+    align-items: center
+    border: 1px #389aeb solid
+    transition: background .3s, color .3s
+
+    &:hover
+      background: transparent
+      color: #389aeb
+
+  &_loading
+    position: relative
+    padding: 0 45px
+
+    &:after
+      content: ''
+      position: absolute
+      right: 5px
+      top: -2px
+      width: 35px
+      height: 35px
+      background: url(../img/icon_loading.gif) 50% 50% / cover  no-repeat
+
+  &_disable
+    background: #f8f8f8
+    color: #c9c9c9
+    border-color: #f8f8f8
+
+    &:hover
+      background: #f8f8f8
+      color: #c9c9c9
+      border-color: #f8f8f8
+
+
+  &_error
+    border-color: #d86371
+    background: none
+    color: #d86371
+    position: relative
+    padding: 0 45px
+
+    &:after
+      content: '\f071'
+      font-family: $font-awesome
+      font-weight: 600
+      font-size: .7rem
+      color: #dc6b77
+      height: 100%
+      display: flex
+      align-items: center
+      position: absolute
+      right: 15px
+      top: 0
+
+    &:hover
+      color: #d86371
+
+
+  &__phone
+    background: none
+    border: 1px #fff solid
+    border-radius: 20px
+    height: 35px
+    display: flex
+    align-items: center
+    text-transform: none
+    font-size: .75rem
+    transition: background .3s, color .3s
+
+    span
+      color: #00d4b3
+      margin-right: 5px
+      
+    &:hover
+      background: #fff
+      color: #00d4b3
+
+
+.search
+  display: flex
+
+
+  .style-select-search
+    background: #000
+
+
+.text
+  &_blue
+    color: #00d4b2
+    
+  &_orange_bg
+    background: #fece00
+    
+
+.title
+  color: #2e2f2f
+  font-size: 1.2rem
+
+  &__wr
+    display: flex
+    justify-content: center
+
+  &_center
+    text-align: center
+
+  &_yellow
+    font-family: $ProximaNova-Bold
+    font-size: 2.5rem
+    color: #fff
+    background: #fece00
+    padding: 0 5px
+    height: 50px
+    line-height: 55px
+    text-transform: uppercase
+    text-align: center
+
+
+  &_h4
+    font-family: $ProximaNova-Bold
+    font-size: 1.5rem
+    color: #fff
+    text-transform: uppercase
+
+
+.js-select
+  position: relative
+  transition: border-color .3s
+  border: 1px transparent solid
+
+
+  .hidden-list-wr
+    position: absolute
+    top: 100%
+    left: 0
+    background: #fff
+    width: 100%
+    transition: opacity .8s
+
+    will-change: transform
+    transform: scale(0)
+    opacity: 0
+
+
+  &.show_down
+    .hidden-list-wr
+      transform: scale(1)
+      opacity: 1
+      top: 100%
+
+  &.show_up
+    .hidden-list-wr
+      transform: scale(1)
+      opacity: 1
+      top: auto
+      bottom: 100%
+
+.style-select
+  &:before
+    content: '\f107'
+    font-family: $font-awesome
+    font-weight: 600
+    color: #aedbff
+    position: absolute
+    font-size: .7rem
+    right: 10px
+    top: 0
+    height: 100%
+    display: flex
+    align-items: center
+    transition: transform .3s
+
+  &:hover
+    input
+      border-radius: 10px 10px 0 0 !important
+
+    &:before
+      transform: rotate(180deg)
+
+  .hidden-list-wr
+    border: 1px #aedbff solid
+    border-radius: 0 0 10px 10px
+    z-index: 10
+    padding: 10px 10px 10px 0
+
+    .nicescroll-rails
+      top: 10px!important
+
+  .hidden-list
+    max-height: 180px
+    overflow: auto
+    padding-right: 15px
+
+
+    li
+      cursor: pointer
+      font-size: .7rem
+      color: #2e2f2f
+      line-height: 35px
+      padding-left: 20px
+
+      &:hover
+        background: #aedbff
+        color: #fff
+
+
+.nicescroll-rails
+  border-radius: 30px
+
+.cookie_policy
+  width: 265px
+  border: 3px #aedbff solid
+  background: #fff
+  position: fixed
+  bottom: 30px
+  right: 30px
+  padding: 150px 25px 30px
+  border-radius: 10px
+  overflow: hidden
+  z-index: 100
+  transition: transform .3s
+  transform: scale(0)
+  transform-origin: 100% 100%
+
+  &.show
+    transform: scale(1)
+
+  &__title
+    text-align: center
+    color: #323232
+    font-size: .8rem
+    text-transform: uppercase
+    font-family: $ProximaNova-Semibold
+    margin-bottom: 10px
+
+  &__text
+    font-size: .7rem
+    color: #4b4a4a
+    
+  &__img
+    width: 250px
+    height: 250px
+    border-radius: 50%
+    background: #aedbff
+    position: absolute
+    top: -150px
+    left: 50%
+    transform: translateX(-50%)
+
+    img
+      position: absolute
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+
+  &__bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 20px
+
+    .bttn
+      color: #323232
+      font-size: .7rem
+      border: 1px #323232 solid
+      background: none
+      border-radius: 5px
+      transition: color .3s, background .3s
+      height: 30px
+
+      &:hover
+        background: #323232
+        color: #fff
+
+    span
+      font-size: .6rem
+      color: #323232
+      margin: 0 10px
+
+    .link
+      font-size: .6rem
+      color: #3e3e3e
+      text-decoration: underline
+
+@import "crm"
