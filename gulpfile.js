@@ -1,11 +1,10 @@
 'use strict';
 
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
-    concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
     cleanCSS = require('gulp-clean-css'),
@@ -25,7 +24,7 @@ var gulp = require('gulp'),
     $ = require('gulp-load-plugins')();
 
 
-var path = {
+const path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
         html: 'build/',
         js: 'build/assets/js/',
@@ -55,7 +54,7 @@ var path = {
     clean: './build'
 };
 
-var config = {
+const config = {
     server: {
         baseDir: "./build"
     },
@@ -87,16 +86,16 @@ gulp.task('pug', function () {
 gulp.task('js:build', () =>
     gulp.src(path.src.js)
 
-    // .pipe(uglify()) //Сожмем наш js
+        .pipe(uglify()) //Сожмем наш js
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}))
 );
 
 gulp.task('browserify', function () {
-    var files = [
+    const files = [
         'common.js'
     ];
-    var tasks = files.map(function (entry) {
+    const tasks = files.map(function (entry) {
         return browserify({
             entries: ['src/assets/js/' + entry],
             debug: true
@@ -106,13 +105,7 @@ gulp.task('browserify', function () {
                 message: "Error: <%= error.message %>",
                 title: "Js error"
             }))
-
-            // .pipe(notify("Found file: <%= file.relative %>!"))
-
             .pipe(vinylSourceStream(entry))
-            // .pipe($.rename({
-            //     extname: '.bundle.js'
-            // }))
             .pipe(gulp.dest(path.build.js))
             .pipe(browserSync.stream({once: true}));
     });
@@ -182,7 +175,7 @@ gulp.task('build', [
     'browserify',
     'style:build',
     'fonts:build',
-    // 'image:build',
+    'image:build',
     'libs:build',
     'pug'
 ]);
